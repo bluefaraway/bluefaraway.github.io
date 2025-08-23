@@ -1,6 +1,17 @@
-remote_theme: bluefaraway/jekyllthemes
-plugins:
-  - jekyll-remote-theme
-
-title: Oh Sunday
+title: "Oh Sunday"
 description: "去走走吧"
+baseurl: ""
+url: "https://username.github.io"
+
+plugins:
+  - jekyll-paginate
+
+permalink: /:title/
+highlighter: pygments
+paginate: 20
+
+markdown: rdiscount
+rdiscount:
+  extensions: ['smart']
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'vendor']
