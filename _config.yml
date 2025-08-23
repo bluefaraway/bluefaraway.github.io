@@ -1,4 +1,6 @@
-theme: minima
+remote_theme: bluefaraway/jekyllthemes
+plugins:
+  - jekyll-remote-theme
+
 title: Oh Sunday
-author: 沉鳞
-discription: NO INTROSPECTION
+description: "去走走吧"
