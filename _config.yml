@@ -5,6 +5,7 @@ url: "https://username.github.io"
 
 plugins:
   - jekyll-paginate
+  - jekyll-feed
 
 permalink: /:title/
 highlighter: pygments
