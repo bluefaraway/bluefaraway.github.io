@@ -1,18 +1,51 @@
+# ===============================
+# Jekyll 基本配置
+# ===============================
 title: "Oh Sunday"
-description: "去走走吧"
-baseurl: ""
-url: "https://username.github.io"
+description: ""
+baseurl: ""          # 如果部署在子目录，例如 /blog，就改为 "/blog"
+url: "https://bluefaraway.github.io"  # GitHub Pages URL
 
+# ===============================
+# 目录与输出
+# ===============================
+source: .
+destination: ./_site   # 不要设置为根目录，否则会覆盖源文件
+
+# ===============================
+# 插件
+# ===============================
 plugins:
+  - jekyll-feed          # 支持 RSS
+  - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-feed
 
-permalink: /:title/
-highlighter: pygments
-paginate: 20
+# ===============================
+# 主题
+# ===============================
+theme: jekyll-theme-primer
 
-markdown: rdiscount
-rdiscount:
-  extensions: ['smart']
+# ===============================
+# 分页
+# ===============================
+paginate: 6            # 每页显示文章数量
+paginate_path: "/page:num"
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'vendor']
+# ===============================
+# 文件排除
+# ===============================
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - _site       # 确保输出目录不会被处理
+# _posts 不在 exclude 中，保证正常显示
+
+# ===============================
+# 其他可选配置
+# ===============================
+markdown: kramdown
+kramdown:
+  input: GFM
+
